@@ -1,0 +1,35 @@
+{
+
+  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast.",
+  "manifest_version": 2,
+  "name": "My-Beast",
+  "version": "1.0",
+  "homepage_url": "https://github.com/ajpeake/my-beast",
+  "icons": {
+    "48": "icons/beasts-48.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "ajpeake@gmail.com",
+      "strict_min_version": "45.0"
+    }
+  },
+
+  "permissions": [
+    "activeTab"
+  ],  
+
+  "browser_action": {
+    "default_icon": "icons/beasts-32.png",
+    "default_title": "My-Beast",
+    "default_popup": "popup/choose_beast.html"
+  },
+  
+  "web_accessible_resources": [
+    "beasts/frog.jpg",
+    "beasts/turtle.jpg",
+    "beasts/snake.jpg"
+  ]
+
+}
